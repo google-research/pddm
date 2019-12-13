@@ -1,9 +1,6 @@
 # PDDM
 
-![](https://github.com/google-research/pddm/blob/master/pddm/gifs/dclaw_gif.gif)
-![](https://github.com/google-research/pddm/blob/master/pddm/gifs/cube_gif.gif)
-![](https://github.com/google-research/pddm/blob/master/pddm/gifs/handwriting_gif.gif)
-![](https://github.com/google-research/pddm/blob/master/pddm/gifs/baoding_gif.gif)
+<img src="https://github.com/google-research/pddm/blob/master/pddm/gifs/dclaw_gif.gif" height="200" /> <img src="https://github.com/google-research/pddm/blob/master/pddm/gifs/cube_gif.gif" height="200" /> <img src="https://github.com/google-research/pddm/blob/master/pddm/gifs/handwriting_gif.gif" height="200" /> <img src="https://github.com/google-research/pddm/blob/master/pddm/gifs/baoding_gif.gif" height="200" />
 
 [[Project Page]](https://bit.ly/pddm2019) [[Paper]](https://arxiv.org/abs/1909.11652)
 
