@@ -1,0 +1,192 @@
+<!-- ======================================================
+# Copyright 2019 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+NOTE: Sources for the origination of this file include:
+: Shadow robot company (https://github.com/shadow-robot/sr_common)
+: Manipulator and Manipulation in High Dimensional Spaces. Vikash Kumar, Ph.D. Thesis, CSE, Univ. of Washington. 2016.
+
+====================================================== -->
+
+<mujocoinclude>
+	<body name="_forearm" childclass="AdroitOverlay" pos="0 .01 0" euler="0 0 0">
+		<geom class="_D_Vizual" pos="0 -.01 .04" name="_V_forearm"  mesh="forearm" euler="0 0 -1.57"/>
+
+
+		<!-- ======= Wrist ======= -->
+		<body name="_wrist" pos="0 0 0.256">
+			<joint name="_WRJ1" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.524 0.175" user="1123"/>
+			<geom class="_D_Vizual" name="_V_wrist" mesh="wrist"/>
+
+			<!-- ======= Palm ======= -->
+			<body name="_palm" pos="0 0 0.034">
+				<joint name="_WRJ0" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.785 0.611" user="1122"/>
+				<geom class="_D_Vizual" name="_V_palm" mesh="palm"/>
+
+
+				<!-- ======= First Finger ======= -->
+				<body name="_ffknuckle" pos="0.033 0 0.095">
+					<joint name="_FFJ3" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.436 0.436"  user="1103"/>
+					<geom class="_D_Vizual" name="_V_ffknuckle" mesh="knuckle"/>
+
+					<!--Proximal-->
+					<body name="_ffproximal" pos="0 0 0">
+						<joint name="_FFJ2" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1102"/>
+						<geom class="_D_Vizual" name="_V_ffproximal" mesh="F3"/>
+
+						<!--middle-->
+						<body name="_ffmiddle" pos="0 0 0.045">
+							<joint name="_FFJ1" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1101"/>
+							<geom class="_D_Vizual" name="_V_ffmiddle" mesh="F2"/>
+
+							<!--distal-->
+							<body name="_ffdistal" pos="0 0 0.025">
+								<joint name="_FFJ0" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1100"/>
+								<geom class="_D_Vizual" name="_V_ffdistal" pos="0 0 .001" mesh="F1"/>
+								<geom class="_D_Vizual" name="_V_fftip" pos="0 0 .001" mesh="biotac"/>
+								<site name="_S_fftip" pos="0.000 0 0.026" group="3"/>
+								<site class="D_Touch" name="_Tch_fftip"/>
+							</body>
+						</body>
+					</body>
+				</body> <!--First Finger End-->
+
+
+				<!-- ======= Middle Finger ======= -->
+				<body name="_mfknuckle" pos="0.011 0 0.099">
+					<joint name="_MFJ3" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.436 0.436"  user="1107"/>
+					<geom class="_D_Vizual" name="_V_mfknuckle" mesh="knuckle"/>
+
+					<!--Proximal-->
+					<body name="_mfproximal" pos="0 0 0">
+						<joint name="_MFJ2" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1106"/>
+						<geom class="_D_Vizual" name="_V_mfproximal" mesh="F3"/>
+
+						<!--Middle-->
+						<body name="_mfmiddle" pos="0 0 0.045">
+							<joint name="_MFJ1" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1105"/>
+							<geom class="_D_Vizual" name="_V_mfmiddle" mesh="F2"/>
+
+							<!--Distal-->
+							<body name="_mfdistal" pos="0 0 0.025">
+								<joint name="_MFJ0" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1104"/>
+								<geom class="_D_Vizual" name="_V_mfdistal" mesh="F1"/>
+								<geom class="_D_Vizual" name="_V_mftip" pos="0 0 .001" mesh="biotac"/>
+								<site name="_S_mftip" 	pos="0.000 0 0.026"	group="3"/>
+								<site class="D_Touch" name="_Tch_mftip"/>
+							</body>
+						</body>
+					</body>
+				</body> <!--Middle Finger End-->
+
+
+				<!-- ======= Ring Finger ======= -->
+				<body name="_rfknuckle" pos="-0.011 0 0.095">
+					<joint name="_RFJ3" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.436 0.436"  user="1111"/>
+					<geom class="_D_Vizual" name="_V_rfknuckle" mesh="knuckle"/>
+
+					<!--Proximal-->
+					<body name="_rfproximal" pos="0 0 0">
+						<joint name="_RFJ2" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1110"/>
+						<geom class="_D_Vizual" name="_V_rfproximal" mesh="F3"/>
+
+						<!--Middle-->
+						<body name="_rfmiddle" pos="0 0 0.045">
+							<joint name="_RFJ1" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1109"/>
+							<geom class="_D_Vizual" name="_V_rfmiddle" mesh="F2"/>
+
+							<!--Distal-->
+							<body name="_rfdistal" pos="0 0 0.025">
+								<joint name="_RFJ0" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1108"/>
+								<geom class="_D_Vizual" name="_V_rfdistal" mesh="F1" pos="0 0 .001"/>
+								<geom class="_D_Vizual" name="_V_rftip" pos="0 0 .001" mesh="biotac"/>
+								<site name="_S_rftip" 	pos="0.000 0 0.026"	group="3"/>
+								<site class="D_Touch" name="_Tch_rftip"/>
+							</body>
+						</body>
+					</body>
+				</body> <!--Ring Finger End-->
+
+
+				<!-- ======= Little Finger ======= -->
+				<body name="_lfmetacarpal" pos="-0.017 0 0.044">
+					<joint name="_LFJ4" type="hinge" pos="0 0 0" axis="0.571 0 0.821" range="0 0.698"  user="1116"/>
+					<geom class="_D_Vizual" name="_V_lfmetacarpal" pos="-0.016 0.000 -0.023" mesh="lfmetacarpal"/>
+
+					<!--Knuckle-->
+					<body name="_lfknuckle" pos="-0.017 0 0.044">
+						<joint name="_LFJ3" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.436 0.436"  user="1115"/>
+						<geom class="_D_Vizual" name="_V_lfknuckle" mesh="knuckle"/>
+
+						<!--Proximal-->
+						<body name="_lfproximal" pos="0 0 0">
+							<joint name="_LFJ2" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1114"/>
+							<geom class="_D_Vizual" name="_V_lfproximal" mesh="F3"/>
+
+							<!--Middle-->
+							<body name="_lfmiddle" pos="0 0 0.045">
+								<joint name="_LFJ1" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1113"/>
+								<geom class="_D_Vizual" name="_V_lfmiddle" mesh="F2"/>
+
+								<!--Distal-->
+								<body name="_lfdistal" pos="0 0 0.025">
+									<joint name="_LFJ0" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.571"  user="1112"/>
+									<geom class="_D_Vizual" name="_V_lfdistal" mesh="F1" pos="0 0 .001"/>
+									<geom class="_D_Vizual" name="_V_lftip" pos="0 0 .001" mesh="biotac"/>
+									<site name="_S_lftip" 	pos="0.000 0 0.026"	group="3"/>
+									<site class="D_Touch" name="_Tch_lftip"/>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body> <!--Little Finger End-->
+
+
+				<!-- ======= Thumb Finger ======= -->
+				<body name="_thbase" pos="0.034 -0.009 0.029" axisangle="0  1 0  0.785" >
+					<joint name="_THJ4" type="hinge" pos="0 0 0" axis="0 0 -1" range="-1.047 1.047"  user="1121"/>
+					<geom class="_D_Vizual" name="_V_thbase" type="box" group="1" pos="0 0 0" size="0.001 0.001 0.001" />
+
+					<!--Proximal-->
+					<body name="_thproximal" pos="0 0 0">
+						<joint name="_THJ3" type="hinge" pos="0 0 0" axis="1 0 0" range="0 1.309"  user="1120"/>
+						<geom class="_D_Vizual" name="_V_thproximal" mesh="TH3_z"/>
+
+						<!--Hub-->
+						<body name="_thhub" pos="0 0 0.038">
+							<joint name="_THJ2" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.262 0.262"  user="1119"/>
+							<geom class="_D_Vizual" name="_V_thhub" type="box" group="1" pos="0 0 0" size="0.001 0.001 0.001"/>
+
+							<!--Middle-->
+							<body name="_thmiddle" pos="0 0 0">
+								<joint name="_THJ1" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.524 0.524"  user="1118"/>
+								<geom class="_D_Vizual" name="_V_thmiddle" mesh="TH2_z"/>
+
+								<!--Distal-->
+								<body name="_thdistal" pos="0 0 0.032">
+									<joint name="_THJ0" type="hinge" pos="0 0 0" axis="0 1 0" range="-1.571 0"  user="1117"/>
+									<geom class="_D_Vizual" name="_V_thdistal" mesh="TH1_z"/>
+									<geom class="_D_Vizual" name="_V_thtip" pos="0 0 .001" mesh="biotac" euler='0 0 -1.57'/>
+									<site name="_S_thtip" 	pos="0.000 0 0.0275" group="3"/>
+									<site class="D_Touch" name="_Tch_thtip" size="0.005 0.011 0.016" pos="-.005 0 0.02" />
+								</body>
+							</body>
+						</body>
+					</body>
+				</body> <!--Thumb Finger End-->
+			</body> <!--Palm Ends-->
+		</body> <!--Wrist Ends-->
+	</body> <!--Forearm/ Hand Actuation Ends-->
+
+</mujocoinclude>

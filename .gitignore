@@ -1,0 +1,7 @@
+MUJOCO_LOG.TXT
+__pycache__/*
+*.pdf
+*.pyc
+*egg-info
+pddm/output*
+pddm/delete*
