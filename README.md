@@ -1,9 +1,9 @@
 # PDDM
 
-![PDDM](https://lh4.googleusercontent.com/dfnLKYVIS4Fxv8x7PpMd0ZoWd-HrELxUY5JoTjtu0F0PS5ws7gxHlFFtSHH2Btdw5TP_xFkMkpKqDDfYoR1er00kZ8T5dfA72QwpI3DV5gxBAK2Gd_H1=w170)
-![PDDM](https://lh5.googleusercontent.com/YylkKyEMS7pr_5nVpAj-gWRPlDTRBtwnlHi1mFP--eVxnW5RVp08vg6oM-8OEcN4pBsrZSSqbtSJbKcvt3srA5m9Ypse4S_Z9U3FYOOxICo185i4lw=w271)
-![PDDM](https://lh4.googleusercontent.com/zwxsAy5ZGs4GoIflV0Rjx3s6IUyO7YFgDBctd2Xq5pIyuwd4svpzd4-wM1gNQhtbPqKzNsiInPjA-uf7DEex_o3fMVJTgYQRtV8O8A8fVBLJSkBwRg=w170)
-![PDDM](https://lh4.googleusercontent.com/50Xj4USD_cGpnA_mdROMazy2JNddH7NXyxbojIBCUnQUOKTcS_vk4VWL3BQi785E2gLS7BBkOzuAWfk99R0mGVcOJ1hOmK-nxo-gshduWV918rSvCMFO=w170)
+![](https://github.com/google-research/pddm/blob/master/pddm/gifs/dclaw_gif.gif)
+![](https://github.com/google-research/pddm/blob/master/pddm/gifs/cube_gif.gif)
+![](https://github.com/google-research/pddm/blob/master/pddm/gifs/handwriting_gif.gif)
+![](https://github.com/google-research/pddm/blob/master/pddm/gifs/baoding_gif.gif)
 
 [[Project Page]](https://bit.ly/pddm2019) [[Paper]](https://arxiv.org/abs/1909.11652)
 
