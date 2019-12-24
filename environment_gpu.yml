@@ -16,6 +16,7 @@ name: pddm-gpu-env
 channels:
 - pytorch
 - defaults
+- conda-forge
 dependencies:
 - python=3.5
 - mkl-service=1.1.2
@@ -26,7 +27,7 @@ dependencies:
   - gym==0.10.11
   - ipdb==0.11
   - matplotlib==2.1.2
-  - mujoco-py==1.50.1.35
+  - mujoco-py==1.50.1.*
   - pip==18.0
   - pyyaml==3.12
   - tqdm==4.25.0
